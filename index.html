@@ -1,34 +1,24 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kuis Phishing – Edukasi Keamanan Siber</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kuis Phishing</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="quiz-container">
-    <header>
-      <h1>Kuis Keamanan Siber</h1>
-      <div class="progress">
-        <div id="progress-bar"></div>
-      </div>
-    </header>
+  <div class="container">
+    <h1>Kuis Phishing</h1>
 
-    <div id="question-container">
-      <div id="timer">Sisa waktu: <span id="time">30</span>s</div>
-      <h2 id="question"></h2>
-      <div id="choice-container"></div>
+    <div id="quiz-container">
+      <p id="question"></p>
+      <div id="options"></div>
     </div>
 
-    <div id="controls">
-      <button id="next-btn" class="btn">Selanjutnya</button>
-    </div>
-
-    <div id="result-container" class="hidden">
+    <div id="result" class="hidden">
       <h2>Hasil Kuis</h2>
       <p id="score-text"></p>
-      <button id="restart-btn" class="btn">Ulangi Kuis</button>
+      <button id="retry-btn">Coba Lagi</button>
     </div>
   </div>
 
