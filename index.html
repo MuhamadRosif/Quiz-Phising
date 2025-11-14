@@ -1,27 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kuis Phishing</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kuis Phishing - Upgrade</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-  <div class="container">
-    <h1>Kuis Phishing</h1>
+    <div class="container hidden" id="quiz-container">
+        <h1>Kuis Phishing</h1>
 
-    <div id="quiz-container">
-      <p id="question"></p>
-      <div id="options"></div>
+        <div id="progress-bar">
+            <div id="progress"></div>
+        </div>
+
+        <div id="question-box">
+            <h2 id="question">Memuat soal...</h2>
+            <div id="answers"></div>
+        </div>
+
+        <div class="info-panel">
+            <p>Waktu: <span id="timer">0</span> detik</p>
+            <p>Nomor: <span id="q-number">1</span>/<span id="q-total">0</span></p>
+        </div>
     </div>
 
-    <div id="result" class="hidden">
-      <h2>Hasil Kuis</h2>
-      <p id="score-text"></p>
-      <button id="retry-btn">Coba Lagi</button>
+    <div class="start-screen" id="start-screen">
+        <h1>Kuis Phishing</h1>
+        <button id="start-btn">Mulai Kuis</button>
     </div>
-  </div>
 
-  <script src="script.js"></script>
+    <div class="result-screen hidden" id="result-screen">
+        <h1>Hasil Kuis</h1>
+        <p>Skor Anda: <span id="final-score"></span></p>
+        <p>Total Waktu: <span id="final-time"></span> detik</p>
+        <p id="badge"></p>
+        <button onclick="restartQuiz()">Ulangi</button>
+    </div>
+
+    <script src="script.js"></script>
 </body>
+
 </html>
